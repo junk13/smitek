@@ -1,0 +1,233 @@
+@import "colors"
+
+*, *:hover, *:focus, *:active
+	outline: none !important	
+b, strong
+	font-weight: bold
+a, a:hover, a:focus, a:active
+	color: #fff
+	text-decoration: none
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+h1,h2,h3,h4,h5,h6
+	margin: 0
+	font-weight: normal
+	color: #000
+img
+	display: inline-block
+	max-width: 100%
+	max-height: 100%
+	height: auto
+input
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+input, textarea, button
+	transition: border-color .25s ease,background-color .25s ease, color .25s ease
+	outline: none
+p
+	margin-bottom: 0
+a
+	transition: color .25s ease
+svg path,
+svg polygon,
+svg rect,
+	transition: all .25s ease
+label
+	margin-bottom: 0
+.pre-line
+	white-space: pre-line
+.t-center
+	text-align: center
+.btn-wrapper
+	display: block
+	line-height: 0
+	width: 100%
+.title
+	display: block
+	width: 100%
+
+#preloadedImages
+	width: 0px
+	height: 0px
+	display: inline
+	background-image: url('../img/icons/ic-share-hover.svg')
+
+.ic
+	display: inline-block
+	vertical-align: middle
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+
+.is-disabled
+	opacity: .2
+	pointer-events: none
+
+// COLORS
+.c-main-darken
+	color: $main-darken
+.c-main
+	color: $main
+.c-main-text
+	color: $text
+.c-title
+	color: $title
+.c-subtitle
+	color: $subtitle
+
+// Links
+.link
+	&:hover, &:focus
+		color: $main
+	&:active
+		color: $main-hover
+	&.c-main
+		&:focus
+			color: $main
+		&:hover
+			color: $main-hover
+		&:active
+			color: $main-active
+	&.c-title
+		&:focus
+			color: $title
+		&:hover
+			color: $main
+		&:active
+			color: $main-hover
+
+.logo
+	display: inline-block
+
+.btn
+	display: inline-block
+	font-size: 14px
+	line-height: 22px
+	width: 20rem
+	height: 5.6rem
+	line-height: 5.6rem
+	font-weight: bold
+	text-align: center
+	border: none
+	transition: border-color .3s ease, color .3s ease, background-color .3s ease
+	&-default
+		color: $white
+		background-color: $main
+		&:hover, &:focus
+			color: $white
+		&:hover
+			background-color: $main-hover
+		&:active
+			background-color: $main-active
+	&-border	
+		background-color: transparent
+		line-height: 54px
+		color: $title
+		border: 2px solid #D1D1D1
+		&:hover, &:focus
+			color: $title
+		&:hover
+			border-color: $main
+		&:active
+			border-color: $main-active
+
+.list
+	&.cc-2
+		column-count: 2
+	&-small
+		font-size: 13px
+		line-height: 20px
+	li
+		display: block
+		width: 100%
+		margin-bottom: 7px
+		&:last-child
+			margin-bottom: 0
+	&-checked
+		li
+			position: relative
+			padding-left: 26px
+			margin-bottom: 16px
+			&:before
+				content: ''
+				position: absolute
+				top: 3px
+				left: 4px
+				width: 12px
+				height: 12px
+				background-image: url('../img/icons/ic-checked.svg')
+				background-repeat: no-repeat
+				background-position: center
+				background-size: auto
+
+.black-bg
+	color: $white
+	background-color: #000
+	.btn-border
+		color: $white
+		border-color: $white
+		&:focus
+			color: $white
+			border-color: $white	
+		&:hover
+			color: $main
+			border-color: $main
+		&:active
+			color: $main-active
+			border-color: $main-active
+
+
+.form
+	background-color: $grey
+	padding: 5.3rem 5.8rem
+	&-title
+		margin-bottom: 1.6rem
+	&-group
+		display: block
+		width: 100%
+		margin-bottom: 1.6rem
+		&:last-child
+			margin-bottom: 0
+		&-name
+			display: block
+			width: 100%
+			color: $subtitle
+			margin-bottom: 5px
+		&.has-error
+			.form-control
+				border-color: $red
+	&-control
+		display: block
+		width: 100%
+		max-width: 100%
+		height: 4.8rem
+		background: $white
+		border-radius: 6px
+		padding: 0 2.2rem
+		font-size: 15px
+		line-height: 21px
+		+placeholder-color($label)
+		border-color: $white
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0)
+		transition: border-color .3s ease, box-shadow .3s ease
+		&:hover
+			border-color: $main-hover
+		&:focus
+			border-color: $white
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15)
+		&.is-disabled
+			opacity: 0.5
+	&-textarea
+		resize: none
+		height: 9.1rem
+		padding-top: 1.6rem
+	&-btn
+		input
+			display: none
+	.captcha
+		margin: 2rem 0 3rem
+
+		

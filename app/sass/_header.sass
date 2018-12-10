@@ -1,0 +1,265 @@
+@import "vars"
+
+.header
+	&.header-inner 
+		color: #fff
+		height: 376px
+		background: radial-gradient(376.00px at 51.53% 100%, rgba(12, 56, 120, 0.8) 0%, rgba(24, 36, 79, 0.8) 100%), linear-gradient(0deg, rgba(24, 91, 190, 0.64), rgba(24, 91, 190, 0.64)), url('../img/header-bg.png');
+		background-repeat: no-repeat
+		background-position: center top
+		background-size: cover
+		position: relative
+		.container
+			display: flex
+			flex-direction: column
+			height: 100%
+			.middleLine
+				display: flex
+				flex-direction: column
+				justify-content: flex-end
+				flex: 2
+				padding-bottom: 6.5rem
+				.title
+					color: inherit
+					margin-bottom: 0
+		@media only screen and (min-width : 576px)
+			.topLine
+				padding-top: 4rem
+		.header-logo
+			position: relative
+			transform: none
+			top: auto
+			left: auto
+			margin: 0
+			order: 1
+		.header-controls
+			order: 2
+			.lang ul li .link
+				color: $white
+			.search
+				margin-left: 11rem
+				.search-btn .svg path
+					fill: $white
+		.header-mmenu
+			order: 3
+			margin-left: 32px
+			.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+				background-color: $white
+	.topLine
+		display: flex
+		align-items: center
+		padding-top: 5.1rem
+		position: relative
+	.middleLine
+		padding-top: 8rem
+		padding-bottom: 5.6rem
+		.h1.title
+			margin-bottom: 1rem
+	&-logo
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		margin: 0 auto
+		.logo
+			max-width: 18.1rem
+	&-controls
+		display: flex
+		align-items: center
+		margin-left: auto
+		.lang ul
+			li
+				.link
+					color: $subtitle
+					opacity: 0.5
+					transition: opacity .3s ease
+					&:hover
+						opacity: 1
+				&.active .link
+					opacity: 1
+		.search
+			margin-left: 7rem
+			&-btn
+				cursor: pointer
+				.svg
+					width: 24px
+					height: 24px
+
+.lang ul
+	display: flex
+	li
+		margin-right: 3rem
+		&:last-child
+			margin-right: 0
+		.link
+			font-weight: normal
+
+body.mmenu-is-open
+	overflow: hidden
+	.mmenu
+		transform: translateX(0)
+		.scroll-wrapper
+			transform: translateX(0)
+	.body-shadow
+		opacity: 0.5
+		visibility: visible
+		left: 0
+
+.mmenu
+	position: fixed
+	top: 0
+	left: 0
+	width: 36.1rem
+	height: 100vh
+	z-index: 100
+	color: $white
+	background-color: $main-darken
+	padding: 5.4rem 6rem 15px
+	transform: translateX(-100%)
+	transition: transform .3s ease
+	overflow-x: hidden
+	overflow-y: auto
+	.scroll-wrapper
+		height: auto
+		transform: translateX(-100%)
+		transition: transform .3s ease
+		transition-delay: .15s
+	.link
+		color: $white
+	&-controls
+		.lang
+			display: none
+			ul li
+				margin-right: 15px
+				&:last-child
+					margin-right: 0
+			.active .link
+				opacity: 1
+			.link
+				color: $grey
+				opacity: 0.5
+				transition: opacity .3s ease
+				&:hover
+					opacity: 1
+	&-toggle
+		position: absolute
+		top: 5.5rem
+		right: 3.9rem
+		z-index: 1
+		.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before,
+		.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+			background-color: $white
+	&-list
+		dt
+			margin-top: 2.4rem
+			margin-bottom: 1rem
+			&:first-child
+				margin-top: 0
+			.title
+				color: inherit
+		dd
+			margin-top: 8px
+			.link
+				color: $grey
+				opacity: 0.5
+				transition: opacity .3s ease
+				&:hover
+					opacity: 1
+	&-search
+		margin: 30px 0
+		display: none
+		.form
+			padding: 0
+			background: none
+			position: relative
+			&-control
+				color: $white
+				background-color: transparent
+				border-color: rgba(255,255,255,.5)
+				+placeholder-color(rgba(255,255,255,.5))
+				&:focus
+					border-color: $white
+			&-group
+				&.is-focus + .form-btn .svg path
+					opacity: 1
+			&-btn
+				position: absolute
+				transform: translateY(-50%)
+				top: 50%
+				right: 0
+				width: 50px
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 6px
+				.svg
+					width: 20px
+					height: 20px
+					path
+						fill: $white
+						opacity: 0.5
+						transition: opacity .3s ease
+
+.body-shadow
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	z-index: 99
+	background: radial-gradient(672.00px at 51.53% 100%, #0C3878 0%, #18244F 100%);
+	opacity: 0
+	visibility: hidden
+	left: -9999px
+	transition: opacity .3s ease, visibility .3s ease
+
+.hamburger
+	display: flex
+	padding: 0
+.hamburger-box
+	height: 18px
+.hamburger.is-active:hover, .hamburger:hover
+	opacity: 1
+.hamburger-box,
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	width: 24px	
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	height: 2px
+	border-radius: 3px
+	background-color: $main
+.hamburger-inner:before
+	top: -8px
+.hamburger--collapse .hamburger-inner:after
+	top: -16px
+.hamburger--collapse.is-active .hamburger-inner
+	transform: translate3d(0,-7px,0) rotate(-45deg)
+
+
+.c-slideInUp
+	-webkit-animation-name: c-slideInUp;
+	animation-name: c-slideInUp;
+
+@-webkit-keyframes c-slideInUp
+  0%
+    opacity: 0
+    -webkit-transform: translateY(100px)
+    transform: translateY(100px)
+
+  100%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+
+.c-slideInDown
+	-webkit-animation-name: c-slideInDown;
+	animation-name: c-slideInDown;
+
+@-webkit-keyframes c-slideInDown
+  0%
+    opacity: 0
+    -webkit-transform: translateY(-150px)
+    transform: translateY(-150px)
+
+  100%
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)

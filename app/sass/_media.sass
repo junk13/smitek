@@ -1,0 +1,483 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media only screen and (min-width : 1460px)
+	.services-list .item
+		height: 250px
+// ≥1200px
++media-breakpoint-down(lg)
+	html
+		font-size: 9px
+	.about-large
+		width: 65rem
+	.about-small
+		width: calc(100% - 65rem)
+	.news-column .article
+		margin-right: 4.2rem
+	.news-column
+		padding-top: 5rem
+	.news .double-items .article
+		max-width: calc(50% - 10px)
+	.example-content
+		padding-left: 6rem
+	.catalog
+		padding-bottom: 20px
+// ≥992px
++media-breakpoint-down(md)
+	.visible-lg
+		display: none !important
+	.services-list .item
+		width: 50%
+		&:nth-child(3n)
+			border-right-color: #d1d1d1
+		&:nth-child(2n)
+			border-right: 1px solid #d1d1d1
+	.services-list.full-screen .item:nth-child(3n)
+		border-right-color: #d1d1d1
+	.services-list.full-screen .item:nth-child(2n)
+		border-right-color: transparent
+	.section
+		padding-top: 6rem
+		&:last-child
+			padding-bottom: 6rem
+	.about-large
+		width: 100%
+	.about-small
+		width: 100%
+		padding-left: 0
+		margin-top: 40px
+	.about-small .article
+		margin-bottom: 25px
+	.news-column .article
+		max-width: 100%
+		margin-right: 0
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+	.news-poster.double-items .article-content
+		width: 100%
+		padding-left: 0
+		margin-top: 2.4rem
+	.news-poster .article-content .title
+		padding-right: 0
+	.example-image,
+	.news-page .news-poster .article .article-image
+		width: 250px
+		height: auto
+	.example-content,
+	.news-page .news-poster .article-content
+		width: calc(100% - 250px)
+	.header.header-inner .header-controls .search
+		margin-left: 7rem
+	.table.hidden-lg
+		table,
+		table tbody,
+		table tbody tr,
+		table tbody tr td
+			display: block
+			width: 100%
+		table tbody tr td
+			width: 50%
+			border-bottom: none
+			border-right: none
+			font-weight: 500
+			&:first-child
+				width: 100%
+				border-color: $main
+				background-color: $main
+				color: $white
+			&:last-child, &:nth-last-child(2)
+				border-bottom: 1px solid #d1d1d1
+			&:nth-child(2n + 1)
+				border-right: 1px solid #d1d1d1
+			&:before
+				content: attr(data-title) ":"
+				display: block
+				width: 100%
+				font-size: 14px
+				font-weight: normal
+		table tbody tr
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 25px
+	.catalog
+		padding-bottom: 30px
+	.section .images .images-photo
+		height: 29rem
+	.footer-logo
+		order: 1
+	.footer-partners
+		order: 2
+	.footer .footer-copyright
+		width: 100%
+		order: 3
+		margin-top: 30px
+	.footer .footer-copyright .copyright
+		text-align: left
+	.footer-partners-logos img
+		width: 5.5rem
+	.footer-nav ul li
+		margin-right: 2rem
+	.footer-callback
+		text-align: right
+	.footer .topLine
+		padding-bottom: 30px
+	.footer .bottomLine
+		padding-top: 30px
+	.section .images .images-photo
+		height: 29rem
+	.news-poster .two-columns-col .article
+		display: block
+	.news-poster .two-columns-col .article-content
+		width: 100%
+		padding-left: 0
+		margin-top: 15px
+	.form
+		padding: 3rem
+	.contacts-info
+		padding-right: 3rem
+// ≥768px
++media-breakpoint-down(sm)
+	.h1
+		font-size: 3.8rem
+		line-height: 4.7rem
+	.h2
+		font-size: 3rem
+		line-height: 3.7rem
+	.h3
+		font-size: 2.2rem
+		line-height: 2.6rem
+	.h4
+		font-size: 2rem
+		line-height: 3rem
+		font-weight: 300
+	.header .topLine
+		padding-top: 30px
+	.header-logo
+		position: relative
+		transform: none
+		left: auto
+		margin: 0
+		margin-left: 20px
+	.header-logo .logo
+		max-width: 150px
+	.mmenu
+		padding: 5rem 4rem
+	.mmenu-toggle
+		top: 5rem
+	.header-controls .search,
+	.header.header-inner .header-controls .search
+		margin-left: 30px
+	.services-list .item
+		padding: 30px
+	.footer-nav
+		width: 100%
+		flex: none
+		margin-bottom: 15px
+	.footer-callback
+		flex: none
+		width: 100%
+		text-align: left
+	.footer-nav ul li
+		margin-right: 0
+	.footer-nav ul
+		justify-content: space-between
+	.services-list .item
+		height: 200px
+	.list.cc-2
+		column-count: 1
+	.news-poster .article-content p br
+		display: none
+	.example-image,
+	.news-page .news-poster .article .article-image
+		width: 100%
+	.example-content
+		width: 100%
+		padding-left: 0
+		padding-top: 30px
+	.news-poster .article-content .link-wrapper
+		bottom: auto
+	.news-page .news-poster .article-content
+		width: 100%
+		padding-left: 0
+		margin-top: 15px
+	.example-table
+		margin-top: 5rem
+	.news-large .article .article-image
+		height: 150px
+	.section .images .images-photo
+		height: 20rem
+	.pagination,
+	.section p+.services-list
+		margin-top: 5rem
+	.contacts .two-columns-col
+		width: 100%
+		margin-right: 0
+		margin-bottom: 30px
+	.contacts-info .section-title
+		margin-bottom: 30px
+	.contacts-maps
+		margin-top: 30px
+	
+// ≥576px
++media-breakpoint-down(xs)
+	.h1
+		font-size: 3.6rem
+		line-height: 4.5rem
+	.h2
+		font-size: 2.8rem
+		line-height: 3.5rem
+	.services-list .item
+		width: 100%
+		height: 175px
+	.services-list .item:nth-child(3n)
+		border-right-color: transparent
+	.services-list .item.is-hover
+		color: $white
+		box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.05);
+	.services-list .item.is-hover .item-title
+		color: $white
+	.services-list .item.is-hover .item-photo
+		opacity: 1
+	.services-list .item-photo
+		transition: all .3s cubic-bezier(.16,.01,.77,1)
+	.services-list .item-title,
+	.services-list .item p
+		transition: none
+	.news-poster .article-content
+		width: 100%
+		padding-left: 0
+		margin-top: 2.4rem
+	.news-poster
+		margin-bottom: 0
+	.example-content .title
+		margin-top: 30px
+		margin-bottom: 10px
+	.about-small .article p
+		white-space: normal
+	.news-large .article .article-image
+		height: auto
+	// .services-list .item
+	// 	padding: 15px
+	.two-columns-col
+		width: 100%
+		margin-right: 0
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+	// CUSTOM MARGINS START
+	.contacts-info p
+		margin-top: 5px
+		margin-bottom: 15px
+	.news-poster .article-content .title,
+	.news-page .news-poster .article .article-date,
+	.about-small .article-title
+		margin-bottom: 5px
+	.news-page .news-poster .article-content .title,
+	.services-list .item-title
+		margin-bottom: 10px
+	.about-large .article-title,
+	.section .section-title
+		margin-bottom: 15px
+	.pagination,
+	.section .list-checked,
+	.about-small,
+	.section .images+p,
+	.section .images,
+	.section p+.services-list
+		margin-top: 30px
+	.about-small .article,
+	.news-column .article,
+		margin-bottom: 30px	
+	.form
+		padding: 30px
+	.services-list + .section,
+	.news-column
+		padding-top: 30px
+	.about
+		padding-bottom: 30px
+	.section
+		padding-top: 60px
+		&:last-child
+			padding-bottom: 60px
+	// CUSTOM MARGINS END
+	.news .news-poster .article
+		padding: 15px
+		border: 1px solid #f5f4fa
+	.news:not(.news-large) .news-poster .article-image
+		width: 100%
+		max-width: 50%
+		height: auto
+	.table.hidden-lg table tbody tr td
+		width: 100%
+		border-right: 1px solid #d1d1d1
+	.table.hidden-lg table tbody tr td:first-child
+		border-color: #0051a3
+	.table.hidden-lg table tbody tr td:nth-last-child(2)
+		border-bottom: none
+	.header.header-inner .header-mmenu
+		margin-left: 30px
+	.services-list .item,
+	.services-list .item:nth-child(3n)
+		border-right-color: #d1d1d1
+	.services-list.full-screen .item,
+	.services-list.full-screen .item:nth-child(3n)
+		border-right-color: transparent
+	.section .images .images-photo
+		width: 100%
+		height: auto
+		background: none !important
+		margin-right: 0
+		margin-bottom: 15px
+		img
+			display: block !important
+		&:last-child
+			margin-bottom: 0
+	.pagination ul li:last-child .link span
+		margin-right: 1rem
+	.pagination ul li:first-child .link span
+		margin-left: 1rem
+	.pagination ul li
+		margin: 0 1.5rem
+	.footer
+		padding: 30px 0
+		text-align: center
+	.footer-nav
+		order: 2
+		margin-bottom: 0
+		padding: 20px 0
+		position: relative
+		&:before, &:after
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			width: 50px
+			height: 1px
+			background-color: #d1d1d1
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+	.footer-nav ul
+		display: block
+	.footer-nav ul li
+		width: 100%
+		margin-bottom: 15px
+		text-transform: uppercase
+		&:last-child
+			margin-bottom: 0
+	.footer-callback
+		text-align: inherit
+		order: 1
+		margin-bottom: 20px
+	.footer-callback .link-wrapper
+		margin-right: 0
+		width: 100%
+	.footer .bottomLine
+		padding-top: 20px
+	.footer .bottomLine .footer-logo
+		display: none
+	.footer .topLine .footer-logo
+		display: inline-block
+		margin-right: 0
+		margin-bottom: 20px
+	.footer .topLine
+		justify-content: center
+		border: none
+		padding-bottom: 0
+	.footer-partners
+		padding-right: 0
+		justify-content: center
+	.footer-partners,
+	.footer-partners-title
+		width: 100%
+	.footer-partners-title
+		margin-bottom: 10px
+	.footer .footer-copyright .copyright
+		text-align: inherit
+	.header.header-inner
+		min-width: 300px
+	.header.header-inner .container .middleLine .title br
+		display: none
+	.news-page .news-poster .article .article-image
+		max-width: 100%
+	.catalog
+		padding-bottom: 15px
+	.header.header-inner .container .middleLine
+		padding-bottom: 60px
+@media only screen and (max-width : 479px)
+	.pagination ul
+		justify-content: center
+	.pagination ul li:last-child .link span,
+	.pagination ul li:first-child .link span
+		display: none
+	.pagination ul li:last-child,
+	.pagination ul li:first-child
+		margin: 0 1.5rem
+		position: relative
+		top: -1px
+@media only screen and (max-width : 424px)
+	.header-controls
+		display: none
+	.header-logo
+		order: 1
+		margin-left: 0
+		margin-right: auto
+	.header-mmenu
+		order: 2
+	.mmenu
+		width: 100%
+	.mmenu
+		padding: 7rem 4rem 5rem
+	.mmenu-controls
+		display: flex
+		align-items: center
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		padding: 1rem 2rem 1rem 4rem
+		background-color: lighten($main-darken, 3%)
+		margin-bottom: 2rem
+		z-index: 100
+	body.mmenu-is-open .mmenu .lang li,
+	body.mmenu-is-open .mmenu .mmenu-toggle,
+		transform: scale(1)
+	.mmenu-controls .lang
+		display: block
+	.mmenu-controls .lang li,
+	.mmenu-controls .mmenu-toggle
+		transform: scale(0)
+		transition: transform .3s ease
+		transition-delay: .4s
+	.mmenu .scroll-wrapper
+		transition-delay: .2s
+	.mmenu-toggle
+		width: auto
+		position: relative
+		top: auto
+		right: auto
+		margin-left: auto
+	.header.header-inner .header-mmenu
+		margin-left: auto
+	.mmenu-search
+		display: block
+@media only screen and (max-width : 355px)
+	.catalog .catalog-list
+		width: 100%
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+	.hidden-lg
+		display: none !important
+
+// ≤1200px
++media-breakpoint-up(xl)
